@@ -3,10 +3,15 @@
 /**
  * Einrichtungshaus Ostermann GmbH & Co. KG - Not Found Redirector
  *
- * Redirects NotFounds to the Search
+ * Redirects 404 not-found pages to the search.
+ * Note: the debug mode in config.php has to be deactivated and the options throwExceptions
+ * and showException have to be default values.
  *
  * 1.0.0
  * - initial release
+ *
+ * 1.0.1
+ * - code beautify
  *
  * @package   OstNotFoundRedirector
  *
@@ -38,8 +43,6 @@ class OstNotFoundRedirector extends Plugin
         parent::build($container);
     }
 
-
-
     /**
      * Activate the plugin.
      *
@@ -50,8 +53,6 @@ class OstNotFoundRedirector extends Plugin
         // clear complete cache after we activated the plugin
         $context->scheduleClearCache($context::CACHE_LIST_ALL);
     }
-
-
 
     /**
      * Install the plugin.
@@ -82,8 +83,6 @@ class OstNotFoundRedirector extends Plugin
         parent::install($context);
     }
 
-
-
     /**
      * Update the plugin.
      *
@@ -101,8 +100,6 @@ class OstNotFoundRedirector extends Plugin
         // call default updater
         parent::update($context);
     }
-
-
 
     /**
      * Uninstall the plugin.

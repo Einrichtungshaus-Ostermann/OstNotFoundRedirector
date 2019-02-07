@@ -2,7 +2,6 @@
 <container xmlns="http://symfony.com/schema/dic/services"
            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
            xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
-
     <services>
 
         <!-- configuration -->
@@ -11,11 +10,11 @@
             <argument type="string">OstNotFoundRedirector</argument>
         </service>
 
-        <service id="ost_not_found_redirector.listeners.frontend" class="OstNotFoundRedirector\Listeners\Frontend">
-            <tag name="shopware.event_subscriber"/>
+        <!-- frontend listeners -->
+        <service id="ost_not_found_redirector.listeners.controllers.frontend." class="OstNotFoundRedirector\Listeners\Controllers\Frontend">
             <argument type="service" id="ost_not_found_redirector.configuration"/>
+            <tag name="shopware.event_listener" method="onPostDispatch" event="Enlight_Controller_Action_PostDispatchSecure_Frontend"/>
         </service>
 
     </services>
-
 </container>

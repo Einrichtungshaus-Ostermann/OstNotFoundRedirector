@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="../../../../engine/Shopware/Components/Plugin/schema/config.xsd">
-
     <elements>
 
         <element type="button">
@@ -9,11 +8,18 @@
             <label><![CDATA[<b>Allgemeine Einstellungen</b>]]></label>
         </element>
 
+        <element type="boolean" scope="shop">
+            <name>shopStatus</name>
+            <label>Shop aktivieren</label>
+            <value>true</value>
+            <description>Soll das Plugin für diesen Shop aktiviert werden?</description>
+        </element>
+
         <element type="textarea">
             <name>disallowedParts</name>
-            <label>Disallowed Parts</label>
+            <label>Ausgeschlossene Parameter</label>
+            <description>Es findet keine Weiterleitung auf die Suche statt, falls einer der angegeben Parameter in der Url vorhanden ist. Die Parameter werden via Volltextsuche innerhalb der Url gesucht.</description>
         </element>
 
     </elements>
-
 </config>
