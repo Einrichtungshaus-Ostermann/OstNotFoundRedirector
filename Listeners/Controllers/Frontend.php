@@ -48,7 +48,7 @@ class Frontend
         $response = $subject->Response();
 
         // check for disallowed parts
-        foreach (explode("\n", $this->config['disallowedParts']) as $part) {
+        foreach (explode("\n", (string) $this->config['disallowedParts']) as $part) {
             if (strpos(strtolower($request->getRequestUri()), strtolower($part)) !== false) {
                 return;
             }

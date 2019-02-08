@@ -13,6 +13,9 @@
  * 1.0.1
  * - code beautify
  *
+ * 1.0.2
+ * - added type cast for nullable config
+ *
  * @package   OstNotFoundRedirector
  *
  * @author    Tim Windelschmidt <tim.windelschmidt@ostermann.de>
