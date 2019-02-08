@@ -18,7 +18,7 @@
         <element type="textarea">
             <name>disallowedParts</name>
             <label>Ausgeschlossene Parameter</label>
-            <description>Es findet keine Weiterleitung auf die Suche statt, falls einer der angegeben Parameter in der Url vorhanden ist. Die Parameter werden via Volltextsuche innerhalb der Url gesucht.</description>
+            <description>Es findet keine Weiterleitung auf die Suche statt, falls einer der angegeben Parameter in der Url vorhanden ist. Die Parameter werden via Volltextsuche innerhalb der Url gesucht. Ein Parameter pro Zeile.</description>
         </element>
 
     </elements>
